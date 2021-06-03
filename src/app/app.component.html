@@ -1,0 +1,23 @@
+<form #userPost ="ngForm" (ngSubmit) ="onSubmit(userPost.value)" ngNativeValidate>
+
+  <input type="text" name="first" class="form-control"  ngModel placeholder="First string" required/>
+  
+  <input type="text" name="second" class="form-control"  ngModel placeholder="Second string" required/>
+  
+  <button type="submit">Submit </button>
+  <div>
+    <div *ngFor="let item of succesfull| keyvalue">
+      {{ item.key }} - {{ item.value }}
+    </div>
+  </div>
+
+  <div>
+    <div *ngFor="let item of errorList| keyvalue">
+      {{ item.key }} - {{ item.value }}
+    </div>
+  </div>
+</form>
+
+<table>
+
+</table>
